@@ -5,6 +5,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Transactional Email</title>
+    <style>
+      *, *::before, *::after {
+         box-sizing: border-box;
+      }
+      body {
+         margin: 0;
+         padding: 0;
+         
+      }
+      
+      @media only screen and (max-width: 600px){
+         .container {
+         width: 100%;
+      }  
+      
+      }
+    </style>
   </head>
   <body>
 
@@ -14,37 +31,83 @@
    cellpadding="0"
    border="0"
    align="center"
-   style=
+   style="border: 1px solid red; margin: 0; padding: 0"
    >
    <tr>
       <td>
          <!-- Email Container Start-->
          <table
-         width=100%
+         class="container"
+         width="700"
          cellspacing="0"
          cellpadding="0"
          border="0"
          align="center"
-         style="width: 600px;"
+         style="background-color: #e4e4e4; border: 1px solid blue; margin: 0 auto; padding: 0"
          >
          <!-- Header Start -->
          <tr>
             <td>
-
+               <table
+               width="100%"
+               cellspacing="0"
+               cellpadding="0"
+               border="0"
+               align="center"
+               style=
+               >
+               <tr>
+                  <td>
+                     <!-- Header Left Start -->
+                     <table
+                     class="header-left"
+                     width="100%"
+                     cellspacing="0"
+                     cellpadding="0"
+                     border="0"
+                     align="left"
+                     style=
+                     >
+                        <tr>
+                           <td style="width: 35%; padding: 11px; text-align: center;  background-color: #cc0033;">
+                              <a href="https://imgur.com/SxzoLbq"><img style="width: 200px;" src="https://i.imgur.com/SxzoLbq.png" title="source: imgur.com" /></a>
+                           </td>
+                           <td style="width: 65%;padding: 10px; text-align: left; background-color: #000000;">
+                              <a href="https://imgur.com/0YKBrJy"><img style="width: 172px;" src="https://i.imgur.com/0YKBrJy.jpg" title="source: imgur.com" /></a>
+                           </td>
+                        </tr>
+                     </table>
+                     <!-- Header Left End -->
+                  </td>
+               </tr>
+               </table>
             </td>   
          </tr>
          <!-- Header End -->
          <!-- Thank You Start -->
          <tr>
             <td>
-
+               <table
+               width="100%"
+               cellspacing="0"
+               cellpadding="0"
+               border="0"
+               align="center"
+               style="margin: 0px 0px;"
+               >
+                  <tr>
+                     <td style="width: 100%; text-align: center; font-size: 14px; font-family: Arial, Helvetica, sans-serif; font-weight: 300;">
+                        <p style="margin: 0px 150px; padding: 20px 0; line-height: 1.2; color: #000001;">Thank you for your recent transaction at Advance Auto Parts. Here is a digital copy of your receipt for your convenience.</p>
+                     </td>
+                  </tr>
+               </table>     
             </td>
          </tr>
          <!-- Thank You End -->
 
          <!-- Receipt Start -->
          <tr>
-            <td align="center">
+            <td style="font-family: Courier, monospace;">
                <!-- Receipt Container Start -->
                <table
                width="100%"
@@ -52,19 +115,28 @@
                cellpadding="0"
                border="0"
                align="center"
-               style="width: 540px; text-align: center;"
+               style="width: 460px; text-align: center; background-color: white; line-height: 21px;"
                >
                   <!-- Receipt Headerstart -->
                   <tr>
-                     <td>
-
+                     <td style="padding: 20px">
+                        <a href="https://imgur.com/6Wvrnn5"><img src="https://i.imgur.com/6Wvrnn5.png" title="source: imgur.com" /></a>
+                        <p style="margin: 0; font-size: 14px; font-weight: 400; line-height: 21px;">Advance Your Auto</p>
                      </td>
                   </tr>
                   <!-- Receipt Header End -->
                   <!-- Store/Location Start -->
                   <tr>
-                     <td>
-
+                     <td style="font-weight: bold; padding: 10px 20px 0;">
+                        Store #XXXX<br>
+                        1111 E Street Dr<br>
+                        Orlando, FL (444) 444-3098 
+                     </td>
+                  </tr>
+                  <tr>
+                     <td style="font-weight: normal; padding-bottom: 20px;">
+                        9/01/2022 REG 04 TRN 7469<br>
+                        Arty W.
                      </td>
                   </tr>
                   <!-- Store Location End -->
@@ -77,41 +149,9 @@
                         cellpadding="0"
                         border="0"
                         align="center"
-                        style=
+                        style="min-width: 100%; padding: 0 20px; font-weight: bold;"
                         >
                         <!-- Item Categories Start -->
-                        <tr>
-                           <td>
-
-                           </td>
-                           <td>
-
-                           </td>
-                           <td>
-
-                           </td>
-                           <td>
-
-                           </td>
-                        </tr>
-                        <!-- Item Categories End -->
-                        <!-- Item Details Start -->
-                        <tr>
-                           <td></td>
-                        </tr>
-                        <!-- Item Details End -->
-                        <!-- Sku/qty/price/Total Start -->
-                        <tr>
-                           <td>
-
-                           </td>
-                           <!-- Limited Lifetime Replacement -->
-                           <td>
-
-                           </td>
-                        </tr>
-                        <!-- Sku/qty/price/Total End-->
-                        <!-- Sub Total Section Start -->
                         <tr>
                            <td>
                               <table
@@ -120,11 +160,175 @@
                               cellpadding="0"
                               border="0"
                               align="center"
-                              style=
+                              style="font-size: 14px; line-height: 21px;"
+                              >
+                                 <tr>
+                                    <td style="text-align: left; width: 105px; ">
+                                       ITEM<br>
+                                       ====
+                                    </td>
+                                    <td style="text-align: center; width: 105px;">
+                                       QTY<br>
+                                       ===
+                                    </td>
+                                    <td style="text-align: center; width: 105px;">
+                                       PRICE<br>
+                                       =====
+                                    </td>
+                                    <td style="text-align: right; width: 105px;">
+                                       TOTAL<br>
+                                       =====
+                                    </td>
+                                 </tr>
+                              </table>
+                              <table
+                              width="100%"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                              align="center"
+                              style="font-size: 14px;"
+                              >
+                              <tr>
+                                 <td style="text-align: left; line-height: 21px;">HEX KEY SET-SAE 13PC 1 EA CQTE &nbsp; &nbsp;11979224</td>
+                              </tr>
+                              </table>
+                           </td>
+                        </tr>
+                        <!-- Item Categories End -->
+                        <!-- Item Details Start -->
+                        <tr>
+                           <td>
+                              <table
+                              width="100%"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                              align="center"
+                              style="font-size: 14px; line-height: 21px; font-weight: normal"
+                              >
+                                 <tr>
+                                    <td style="text-align: left; width: 105px; ">
+                                       TQ453
+                                    </td>
+                                    <td style="text-align: center; width: 105px;">
+                                       1
+                                    </td>
+                                    <td style="text-align: center; width: 105px;">
+                                       12.99
+                                    </td>
+                                    <td style="text-align: right; width: 105px;">
+                                       $12.99
+                                    </td>
+                                 </tr>
+                              </table>
+                           </td>
+                        </tr>
+                        <!-- Item Details End -->
+                        <!-- Sku/qty/price/Total Start -->
+                        <tr>
+                           <td align="left">
+                              <table
+                              width="100%"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                              align="left"
+                              style="font-size: 13px; font-weight: normal; padding-left: 4.2px; line-height: 21px;"
                               >
                               <tr>
                                  <td>
+                                    LIMITED LIFTIME REPLACEMENT
+                                 </td>
+                              </tr>
+                              </table>
+                           </td>
+                           <!-- Limited Lifetime Replacement -->
+                        </tr>
+                        <!-- Sku/qty/price/Total End-->
+                        <!-- Sub Total Section Start -->
+                        <tr>
+                           <td>
+                              <table
+                              width="420"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                              align="center"
+                              style="font-size: 14px; font-weight: normal;  line-height: 21px; padding-left: 0; margin-top: 20px;"
+                              >
+                              <tr>
+                                 <td align="left" style="width:25%">
 
+                                 </td>
+                                 <td algin="left" style="width: 50%; text-align: left;">
+                                    Sub Total
+                                 </td>
+                                 <td style="text-align: right; width: 25%;">
+                                    $12.99
+                                 </td>
+                              </tr>
+                              </table>
+                              <table
+                              width="420"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                              align="center"
+                              style="font-size: 14px; font-weight: normal;  line-height: 21px; padding-left: 0;"
+                              >
+                              <tr>
+                                 <td align="left" style="width:25%">
+
+                                 </td>
+                                 <td algin="left" style="width: 25%; text-align: left;">
+                                    Tax 1
+                                 </td>
+                                 <td style="text-align: center; width: 25%;">
+                                    6.50%
+                                 </td>
+                                 <td style="text-align: right; width: 25%;">
+                                    $0.85
+                                 </td>
+                              </tr>
+                              </table>
+                              <table
+                              width="420"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                              align="center"
+                              style="font-size: 14px; font-weight: normal;  line-height: 21px; padding-left: 0;"
+                              >
+                              <tr>
+                                 <td align="left" style="width:25%">
+
+                                 </td>
+                                 <td algin="left" style="width: 50%; text-align: left;">
+                                    Total
+                                 </td>
+                                 <td style="text-align: right; width: 25%;">
+                                    $13.84
+                                 </td>
+                              </tr>
+                              </table>
+                              <table
+                              width="420"
+                              cellspacing="0"
+                              cellpadding="0"
+                              border="0"
+                              align="center"
+                              style="font-size: 14px; font-weight: normal;  line-height: 21px; padding-left: 0;"
+                              >
+                              <tr>
+                                 <td align="left" style="width:25%">
+
+                                 </td>
+                                 <td algin="left" style="width: 50%; text-align: left;">
+                                    Visa
+                                 </td>
+                                 <td style="text-align: right; width: 25%;">
+                                    $13.84
                                  </td>
                               </tr>
                               </table>
